@@ -21,6 +21,7 @@ public class PipeLineManager : MonoBehaviour
     private float f_ScrollOffset;
 
     [HideInInspector] public int i_Floor;
+	public int f_floorDistance = 14;
 
     public TileManager tileManager;
 
@@ -94,7 +95,7 @@ public class PipeLineManager : MonoBehaviour
     {
         if (!b_CameraScroll)
         {
-            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position , new Vector3(Camera.main.transform.position.x, 18 - (i_Floor * 14), Camera.main.transform.position.z), 0.5f);
+            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position , new Vector3(Camera.main.transform.position.x, 18 - (i_Floor * f_floorDistance), Camera.main.transform.position.z), 0.5f);
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && !b_IsPointerInButton)
@@ -145,7 +146,7 @@ public class PipeLineManager : MonoBehaviour
                 {
                     v_MousePos = hit.point;
 
-                    target_GameObject.transform.position = new Vector3(v_MousePos.x, -i_Floor * 14 + 1.2f, v_MousePos.z);
+                    target_GameObject.transform.position = new Vector3(v_MousePos.x, -i_Floor * f_floorDistance + 1.2f, v_MousePos.z);
                 }
             }
             else if (b_CameraScroll)
@@ -201,7 +202,7 @@ public class PipeLineManager : MonoBehaviour
                 b_CameraScroll = false;
 
                 if (Camera.main.transform.position.y - 18 <= 0)
-                    i_Floor = (int)Mathf.Abs(Camera.main.transform.position.y - 18 - 7) / 14;
+                    i_Floor = (int)Mathf.Abs(Camera.main.transform.position.y - 18 - 7) / f_floorDistance;
                 else
                     i_Floor = 0;
 
@@ -258,7 +259,7 @@ public class PipeLineManager : MonoBehaviour
         {
             for (int j = 0; j < 4; j++)
             {
-                PipeLines_Position_GameObject[i, j].transform.position = new Vector3(3 - i * 2, -i_Floor * 14 + 1.2f, 3 - j * 2);
+                PipeLines_Position_GameObject[i, j].transform.position = new Vector3(3 - i * 2, -i_Floor * f_floorDistance + 1.2f, 3 - j * 2);
             }
         }
     }

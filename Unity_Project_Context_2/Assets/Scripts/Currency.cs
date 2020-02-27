@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Currency : MonoBehaviour
 {
-	[HideInInspector]
-	public int i_myCurrency = 0;
+	public int myCurrency {
+		get;
+		private set;
+	}
 
 	public static Currency Instance 
 	{
@@ -20,4 +22,13 @@ public class Currency : MonoBehaviour
 		else 
 			Destroy(gameObject);
 	}
+
+	public void AddToCurrency(int amount) {
+		myCurrency += amount;
+	}
+
+	public void RemoveFromcurrency(int amount) {
+		myCurrency -= amount;
+	}
+
 }

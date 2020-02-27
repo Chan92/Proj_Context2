@@ -12,11 +12,8 @@ public class TileManager : MonoBehaviour
     private void Awake()
     {
         Tiles_BoxColl = new BoxCollider[this.transform.childCount];
-    
-        for (int i = 0; i < Tiles_BoxColl.Length; i++)
-        {
-            Tiles_BoxColl[i] = this.transform.GetChild(i).GetComponent<BoxCollider>();
-        }
+
+		
 
         //for (int i = 0; i < this.transform.childCount - 1; i++)
         //{
@@ -28,7 +25,15 @@ public class TileManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        i_LastFloor = 0;
+		Vector3 newPos = Vector3.zero;
+
+		for(int i = 0; i < Tiles_BoxColl.Length; i++) {
+			Tiles_BoxColl[i] = this.transform.GetChild(i).GetComponent<BoxCollider>();
+			Tiles_BoxColl[i].transform.position = newPos;
+			newPos.y -= PipeLineManager.instance.f_floorDistance;
+		}
+
+		i_LastFloor = 0;
         StartCoroutine(SelectFloor());
     }
 
@@ -42,15 +47,14 @@ public class TileManager : MonoBehaviour
         }
     }
 
-
     IEnumerator SelectFloor()
     {
         for (int i = 0; i < Tiles_BoxColl.Length; i++)
         {
-            Tiles_BoxColl[i].enabled = false;
-        }
-        Tiles_BoxColl[i_LastFloor].enabled = true;
-        //Debug.Log(i_LastFloor);
-        yield return null;
+			 Tiles_BoxColl[i].enabled = false;
+		}
+		 Tiles_BoxColl[i_LastFloor].enabled = true;
+		//Debug.Log(i_LastFloor);
+		yield return null;
     }
 }
