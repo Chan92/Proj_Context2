@@ -13,16 +13,9 @@ public class WaterFlowManager : MonoBehaviour
         instance = this;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(CheckWaterFlowPlace());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     IEnumerator CheckWaterFlowPlace()
