@@ -6,6 +6,13 @@ public class WaterConnectCheck : MonoBehaviour{
 	public int layerAmount = 5;
 	public int outputAmount = 3;
 	public GameObject[] tileList;
+	public float pointGainDelay = 2f;
+	public int pointGainAmount = 100;
+
+	[Header("overflow")]
+	public float waterOverflowDelay = 3f;
+	public float waterOverflowRaise = 0.5f;
+	public Transform waterRaise;
 
 	[HideInInspector]
 	public bool[,] connectedWater;	
@@ -15,6 +22,15 @@ public class WaterConnectCheck : MonoBehaviour{
 		connectedWater = new bool[layerAmount, outputAmount];
 		outputObjects = new GameObject[layerAmount, outputAmount];
 		FindOutputs();
+	}
+
+	private void Start() {
+		StartCoroutine(CheckPointGain());
+		StartCoroutine(CheckWaterOverflow());
+	}
+
+	private void LateUpdate() {
+		CheckConnected();
 	}
 
 	public void FindOutputs() {
@@ -55,6 +71,31 @@ public class WaterConnectCheck : MonoBehaviour{
 	}
 
 	public void CheckConnected() {
-		connectedWater[0,0] = outputObjects[0, 0].GetComponent<ConnectBool>().waterConnected;
+		for(int i = 0; i < layerAmount; i++) {
+			for(int j = 0; j < outputAmount; j++) {
+				connectedWater[i, j] = outputObjects[i, j].GetComponent<ConnectBool>().waterConnected;
+			}
+		}
+	}
+
+	IEnumerator CheckPointGain() {
+		while (true) {
+			yield return new WaitForSeconds(pointGainDelay);
+			Currency.Instance.AddToCurrency(ConnectedTotal() * pointGainAmount);
+		}
+	}
+
+	IEnumerator CheckWaterOverflow() {
+		while(true) {
+			yield return new WaitForSeconds(waterOverflowDelay);
+			float punishmentLevel = (GetTotalOutputs() / layerAmount) - ConnectedTotal();
+			Vector3 newPos = waterRaise.position + Vector3.up * (waterOverflowRaise * punishmentLevel);
+
+			while (waterRaise.position.y < newPos.y) {
+				waterRaise.position += Vector3.up * Time.deltaTime;
+				yield return null;
+			}
+
+		}
 	}
 }

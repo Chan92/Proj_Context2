@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ConnectBool : MonoBehaviour{
-	public bool waterConnected = false;
-	public bool cleanWater = false;
+	[HideInInspector]
+	public bool waterConnected = false, cleanWater = false;
 
 	private GameObject connectedPipe;
 
@@ -15,14 +15,14 @@ public class ConnectBool : MonoBehaviour{
 		}
 	}
 
-	private void OnCollisionEnter(Collision collision) {
-		if(collision.gameObject.GetComponent<PipeLine>()) {
-			connectedPipe = collision.gameObject;
+	private void OnTriggerEnter(Collider other) {
+		if(other.transform.parent.GetComponent<PipeLine>()) {	
+			connectedPipe = other.transform.parent.gameObject;
 		}
 	}
 
-	private void OnCollisionExit(Collision collision) {
-		if(collision.gameObject.GetComponent<PipeLine>()) {
+	private void OnTriggerExit(Collider other) {
+		if(other.transform.parent.GetComponent<PipeLine>()) {			
 			connectedPipe = null;
 			waterConnected = false;
 			cleanWater = false;

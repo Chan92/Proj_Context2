@@ -290,7 +290,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 19d043f8f7b7581499c4d8bc1ab875d9,
         type: 3}
       propertyPath: m_Name
-      value: PipeWallsOut (1)
+      value: PipeWallsOutput(points)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 19d043f8f7b7581499c4d8bc1ab875d9,
         type: 3}
@@ -1290,8 +1290,9 @@ GameObject:
   - component: {fileID: 219606936}
   - component: {fileID: 219606938}
   - component: {fileID: 219606937}
-  m_Layer: 12
-  m_Name: GameObject (2)
+  - component: {fileID: 219606939}
+  m_Layer: 0
+  m_Name: Outputs
   m_TagString: WaterFlowPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1322,8 +1323,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1335,11 +1336,25 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219606935}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &219606939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219606935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8817882889aa44944bfdd838f8ebfb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterConnected: 0
+  cleanWater: 0
 --- !u!4 &233064737 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5102568920850988290, guid: f87f73fb58b3cfa4499018c6926ea2b3,
@@ -1538,8 +1553,9 @@ GameObject:
   - component: {fileID: 265392751}
   - component: {fileID: 265392753}
   - component: {fileID: 265392752}
-  m_Layer: 12
-  m_Name: GameObject (2)
+  - component: {fileID: 265392754}
+  m_Layer: 0
+  m_Name: Outputs
   m_TagString: WaterFlowPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1570,8 +1586,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1583,11 +1599,25 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265392750}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &265392754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265392750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8817882889aa44944bfdd838f8ebfb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterConnected: 0
+  cleanWater: 0
 --- !u!1001 &270527987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1854,8 +1884,9 @@ GameObject:
   - component: {fileID: 304558005}
   - component: {fileID: 304558007}
   - component: {fileID: 304558006}
-  m_Layer: 12
-  m_Name: GameObject (1)
+  - component: {fileID: 304558008}
+  m_Layer: 0
+  m_Name: Outputs
   m_TagString: WaterFlowPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1886,8 +1917,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1899,11 +1930,25 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304558004}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &304558008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304558004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8817882889aa44944bfdd838f8ebfb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterConnected: 0
+  cleanWater: 0
 --- !u!1001 &330812404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2520,7 +2565,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 19d043f8f7b7581499c4d8bc1ab875d9,
         type: 3}
       propertyPath: m_Name
-      value: PipeWallsOut (4)
+      value: PipeWallsOutput(points)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 19d043f8f7b7581499c4d8bc1ab875d9,
         type: 3}
@@ -2713,8 +2758,9 @@ GameObject:
   - component: {fileID: 427639466}
   - component: {fileID: 427639468}
   - component: {fileID: 427639467}
-  m_Layer: 12
-  m_Name: GameObject (1)
+  - component: {fileID: 427639469}
+  m_Layer: 0
+  m_Name: Outputs
   m_TagString: WaterFlowPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2745,8 +2791,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2758,11 +2804,25 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427639465}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &427639469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427639465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8817882889aa44944bfdd838f8ebfb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterConnected: 0
+  cleanWater: 0
 --- !u!114 &485727408 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1770379866691768400, guid: 129f756588bccbb4cb40d7da050ea1a5,
@@ -2798,8 +2858,9 @@ GameObject:
   - component: {fileID: 514211510}
   - component: {fileID: 514211512}
   - component: {fileID: 514211511}
-  m_Layer: 12
-  m_Name: GameObject (1)
+  - component: {fileID: 514211513}
+  m_Layer: 0
+  m_Name: Outputs
   m_TagString: WaterFlowPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2830,8 +2891,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2843,11 +2904,119 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514211509}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &514211513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514211509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8817882889aa44944bfdd838f8ebfb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterConnected: 0
+  cleanWater: 0
+--- !u!1 &525641844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 525641845}
+  - component: {fileID: 525641848}
+  - component: {fileID: 525641847}
+  - component: {fileID: 525641846}
+  m_Layer: 0
+  m_Name: Plane (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &525641845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525641844}
+  m_LocalRotation: {x: 0, y: 0, z: 0.043619405, w: 0.9990483}
+  m_LocalPosition: {x: -14.56, y: 1.28, z: -1.1}
+  m_LocalScale: {x: 0.09, y: 1, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 1134449378}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 5}
+--- !u!64 &525641846
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525641844}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &525641847
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525641844}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6917c9461ae6efd4b8df9e4dd94c4a91, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &525641848
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525641844}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &532803646 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 19d043f8f7b7581499c4d8bc1ab875d9,
@@ -3080,7 +3249,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: R
+  m_Text: '?'
 --- !u!222 &557942692
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3658,6 +3827,100 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 526ef19737f0ecd4e9b0ab268cd97a53, type: 3}
+--- !u!1 &643304606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 643304607}
+  - component: {fileID: 643304610}
+  - component: {fileID: 643304609}
+  - component: {fileID: 643304608}
+  m_Layer: 0
+  m_Name: Plane (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &643304607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643304606}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.63, y: 2.06, z: 5.21}
+  m_LocalScale: {x: 2.62, y: 1, z: 0.48}
+  m_Children: []
+  m_Father: {fileID: 1134449378}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &643304608
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643304606}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &643304609
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643304606}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6917c9461ae6efd4b8df9e4dd94c4a91, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &643304610
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643304606}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &652556129 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 19d043f8f7b7581499c4d8bc1ab875d9,
@@ -5832,8 +6095,9 @@ GameObject:
   - component: {fileID: 1035914757}
   - component: {fileID: 1035914759}
   - component: {fileID: 1035914758}
-  m_Layer: 12
-  m_Name: GameObject (2)
+  - component: {fileID: 1035914760}
+  m_Layer: 0
+  m_Name: Outputs
   m_TagString: WaterFlowPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5864,8 +6128,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -5877,11 +6141,25 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035914756}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1035914760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035914756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8817882889aa44944bfdd838f8ebfb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterConnected: 0
+  cleanWater: 0
 --- !u!1 &1055467036
 GameObject:
   m_ObjectHideFlags: 0
@@ -5972,8 +6250,9 @@ GameObject:
   - component: {fileID: 1066004541}
   - component: {fileID: 1066004543}
   - component: {fileID: 1066004542}
-  m_Layer: 12
-  m_Name: GameObject
+  - component: {fileID: 1066004544}
+  m_Layer: 0
+  m_Name: Outputs
   m_TagString: WaterFlowPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6004,8 +6283,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -6017,11 +6296,25 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066004540}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1066004544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066004540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8817882889aa44944bfdd838f8ebfb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterConnected: 0
+  cleanWater: 0
 --- !u!1001 &1071829581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6319,8 +6612,9 @@ GameObject:
   - component: {fileID: 1111897069}
   - component: {fileID: 1111897071}
   - component: {fileID: 1111897070}
-  m_Layer: 12
-  m_Name: GameObject (1)
+  - component: {fileID: 1111897072}
+  m_Layer: 0
+  m_Name: Outputs
   m_TagString: WaterFlowPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6351,8 +6645,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -6364,11 +6658,25 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111897068}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1111897072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111897068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8817882889aa44944bfdd838f8ebfb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterConnected: 0
+  cleanWater: 0
 --- !u!1 &1113351501
 GameObject:
   m_ObjectHideFlags: 0
@@ -6415,6 +6723,83 @@ Transform:
   m_Father: {fileID: 1134449378}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1132876746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1132876747}
+  - component: {fileID: 1132876749}
+  - component: {fileID: 1132876748}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1132876747
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132876746}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8497465403459490528}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -15, y: -50}
+  m_SizeDelta: {x: 230, y: 50}
+  m_Pivot: {x: 1, y: 0.5}
+--- !u!114 &1132876748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132876746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 2
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Points: 9999'
+--- !u!222 &1132876749
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132876746}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1134449377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6470,7 +6855,7 @@ PrefabInstance:
     - target: {fileID: 2817340173513952725, guid: c3e6304c9d4f94a4a93d97240a390c2d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2817340173513952725, guid: c3e6304c9d4f94a4a93d97240a390c2d,
         type: 3}
@@ -6616,8 +7001,9 @@ GameObject:
   - component: {fileID: 1158636082}
   - component: {fileID: 1158636084}
   - component: {fileID: 1158636083}
-  m_Layer: 12
-  m_Name: GameObject (2)
+  - component: {fileID: 1158636085}
+  m_Layer: 0
+  m_Name: Outputs
   m_TagString: WaterFlowPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6648,8 +7034,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -6661,11 +7047,25 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158636081}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1158636085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158636081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8817882889aa44944bfdd838f8ebfb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterConnected: 0
+  cleanWater: 0
 --- !u!1 &1163019591
 GameObject:
   m_ObjectHideFlags: 0
@@ -6875,7 +7275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+  m_Color: {r: 0.746262, g: 0.754245, b: 0.8113208, a: 0.46666667}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7045,7 +7445,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100$
+  m_Text: '   50$'
 --- !u!222 &1236985210
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7746,6 +8146,100 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3305104262901500993}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1414775014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1414775015}
+  - component: {fileID: 1414775018}
+  - component: {fileID: 1414775017}
+  - component: {fileID: 1414775016}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1414775015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414775014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.41, y: 1.28, z: 0}
+  m_LocalScale: {x: 2.52, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1134449378}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1414775016
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414775014}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1414775017
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414775014}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6917c9461ae6efd4b8df9e4dd94c4a91, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1414775018
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414775014}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1467099014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7846,8 +8340,9 @@ GameObject:
   - component: {fileID: 1473462675}
   - component: {fileID: 1473462677}
   - component: {fileID: 1473462676}
-  m_Layer: 12
-  m_Name: GameObject
+  - component: {fileID: 1473462678}
+  m_Layer: 0
+  m_Name: Outputs
   m_TagString: WaterFlowPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7878,8 +8373,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -7891,11 +8386,25 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1473462674}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1473462678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473462674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8817882889aa44944bfdd838f8ebfb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterConnected: 0
+  cleanWater: 0
 --- !u!1 &1476142007
 GameObject:
   m_ObjectHideFlags: 0
@@ -8447,7 +8956,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 19d043f8f7b7581499c4d8bc1ab875d9,
         type: 3}
       propertyPath: m_Name
-      value: PipeWallsOut (5)
+      value: PipeWallsOutput(points)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 19d043f8f7b7581499c4d8bc1ab875d9,
         type: 3}
@@ -8533,6 +9042,36 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1583923399241065730, guid: cd1860f8f322bee41950ae214945d16a,
+        type: 3}
+      propertyPath: m_Text
+      value: Sewerlots
+      objectReference: {fileID: 0}
+    - target: {fileID: 1583923399241065730, guid: cd1860f8f322bee41950ae214945d16a,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1583923399241065730, guid: cd1860f8f322bee41950ae214945d16a,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 57
+      objectReference: {fileID: 0}
+    - target: {fileID: 1583923399241065732, guid: cd1860f8f322bee41950ae214945d16a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1583923399987119729, guid: cd1860f8f322bee41950ae214945d16a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1583923400422783895, guid: cd1860f8f322bee41950ae214945d16a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd1860f8f322bee41950ae214945d16a, type: 3}
 --- !u!1 &1573353329
@@ -8546,8 +9085,9 @@ GameObject:
   - component: {fileID: 1573353330}
   - component: {fileID: 1573353332}
   - component: {fileID: 1573353331}
-  m_Layer: 12
-  m_Name: GameObject
+  - component: {fileID: 1573353333}
+  m_Layer: 0
+  m_Name: Outputs
   m_TagString: WaterFlowPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8578,8 +9118,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -8591,11 +9131,25 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573353329}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1573353333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573353329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8817882889aa44944bfdd838f8ebfb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterConnected: 0
+  cleanWater: 0
 --- !u!1 &1575093528
 GameObject:
   m_ObjectHideFlags: 0
@@ -8729,12 +9283,12 @@ GameObject:
   - component: {fileID: 1587585163}
   - component: {fileID: 1587585162}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1587585162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9192,7 +9746,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 19d043f8f7b7581499c4d8bc1ab875d9,
         type: 3}
       propertyPath: m_Name
-      value: PipeWallsOut (2)
+      value: PipeWallsOutput(points)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 19d043f8f7b7581499c4d8bc1ab875d9,
         type: 3}
@@ -9217,8 +9771,9 @@ GameObject:
   - component: {fileID: 1724931671}
   - component: {fileID: 1724931673}
   - component: {fileID: 1724931672}
-  m_Layer: 12
-  m_Name: GameObject (2)
+  - component: {fileID: 1724931674}
+  m_Layer: 0
+  m_Name: Outputs
   m_TagString: WaterFlowPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9249,8 +9804,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -9262,11 +9817,25 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1724931670}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1724931674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724931670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8817882889aa44944bfdd838f8ebfb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterConnected: 0
+  cleanWater: 0
 --- !u!1001 &1734315153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10101,7 +10670,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 19d043f8f7b7581499c4d8bc1ab875d9,
         type: 3}
       propertyPath: m_Name
-      value: PipeWallsOut (3)
+      value: PipeWallsOutput(points)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 19d043f8f7b7581499c4d8bc1ab875d9,
         type: 3}
@@ -10127,6 +10696,100 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1830523116}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1881325973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1881325974}
+  - component: {fileID: 1881325977}
+  - component: {fileID: 1881325976}
+  - component: {fileID: 1881325975}
+  m_Layer: 0
+  m_Name: Plane (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1881325974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881325973}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.63, y: 2.09, z: -6.91}
+  m_LocalScale: {x: 2.62, y: 1, z: 0.48}
+  m_Children: []
+  m_Father: {fileID: 1134449378}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1881325975
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881325973}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1881325976
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881325973}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6917c9461ae6efd4b8df9e4dd94c4a91, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1881325977
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881325973}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1885075535
 GameObject:
   m_ObjectHideFlags: 0
@@ -10138,8 +10801,9 @@ GameObject:
   - component: {fileID: 1885075536}
   - component: {fileID: 1885075538}
   - component: {fileID: 1885075537}
-  m_Layer: 12
-  m_Name: GameObject (1)
+  - component: {fileID: 1885075539}
+  m_Layer: 0
+  m_Name: Outputs
   m_TagString: WaterFlowPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10170,8 +10834,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -10183,11 +10847,25 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885075535}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1885075539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885075535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8817882889aa44944bfdd838f8ebfb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterConnected: 0
+  cleanWater: 0
 --- !u!1 &1910074277
 GameObject:
   m_ObjectHideFlags: 0
@@ -10199,8 +10877,9 @@ GameObject:
   - component: {fileID: 1910074278}
   - component: {fileID: 1910074280}
   - component: {fileID: 1910074279}
-  m_Layer: 12
-  m_Name: GameObject
+  - component: {fileID: 1910074281}
+  m_Layer: 0
+  m_Name: Outputs
   m_TagString: WaterFlowPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10231,8 +10910,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -10244,11 +10923,25 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1910074277}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1910074281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910074277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8817882889aa44944bfdd838f8ebfb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterConnected: 0
+  cleanWater: 0
 --- !u!1001 &1944937480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10716,8 +11409,9 @@ GameObject:
   - component: {fileID: 2038434877}
   - component: {fileID: 2038434879}
   - component: {fileID: 2038434878}
-  m_Layer: 12
-  m_Name: GameObject
+  - component: {fileID: 2038434880}
+  m_Layer: 0
+  m_Name: Outputs
   m_TagString: WaterFlowPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10748,8 +11442,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -10761,11 +11455,25 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038434876}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2038434880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038434876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8817882889aa44944bfdd838f8ebfb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterConnected: 0
+  cleanWater: 0
 --- !u!1 &2052345186
 GameObject:
   m_ObjectHideFlags: 0
@@ -10970,6 +11678,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2062195126}
+  - component: {fileID: 2062195128}
+  - component: {fileID: 2062195127}
   m_Layer: 0
   m_Name: GameplayField
   m_TagString: Untagged
@@ -10993,6 +11703,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2062195127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062195125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586d5a87600d817499555b0fded18c62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerAmount: 5
+  outputAmount: 3
+  tileList:
+  - {fileID: 1476142007}
+  - {fileID: 1231196854}
+  - {fileID: 1163019591}
+  - {fileID: 1073207014}
+  - {fileID: 1602464806}
+  pointGainDelay: 2
+  pointGainAmount: 100
+  waterOverflowDelay: 5
+  waterOverflowRaise: 0.25
+  waterRaise: {fileID: 1662930785}
+--- !u!114 &2062195128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062195125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd99cb131bb9d74b8376f4fa7d4c6b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointText: {fileID: 1132876748}
+  startCurrency: 500
 --- !u!1 &2080985453
 GameObject:
   m_ObjectHideFlags: 0
@@ -11610,6 +12359,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3901382208387954025, guid: 2b8bd497fc44cd94a9a7acb4e691c049,
+        type: 3}
+      propertyPath: m_Name
+      value: PipeWallsInput(water)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901382208947737851, guid: 2b8bd497fc44cd94a9a7acb4e691c049,
+        type: 3}
+      propertyPath: m_Name
+      value: PipeWallsInput(water)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901382209000100177, guid: 2b8bd497fc44cd94a9a7acb4e691c049,
+        type: 3}
+      propertyPath: m_Name
+      value: PipeWallsInput(water)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901382209533595113, guid: 2b8bd497fc44cd94a9a7acb4e691c049,
+        type: 3}
+      propertyPath: m_Name
+      value: PipeWallsInput(water)
+      objectReference: {fileID: 0}
     - target: {fileID: 4367503168300133394, guid: 2b8bd497fc44cd94a9a7acb4e691c049,
         type: 3}
       propertyPath: m_IsActive
@@ -11634,6 +12403,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845466789807460507, guid: 2b8bd497fc44cd94a9a7acb4e691c049,
+        type: 3}
+      propertyPath: m_Name
+      value: PipeWallsInput(water)
       objectReference: {fileID: 0}
     - target: {fileID: 7190855418183180381, guid: 2b8bd497fc44cd94a9a7acb4e691c049,
         type: 3}
@@ -12177,6 +12951,7 @@ RectTransform:
   - {fileID: 8497465402752239350}
   - {fileID: 8497465402454309057}
   - {fileID: 8497465402258397910}
+  - {fileID: 1132876747}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

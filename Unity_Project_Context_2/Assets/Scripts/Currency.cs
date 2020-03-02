@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Currency : MonoBehaviour
-{
+public class Currency : MonoBehaviour{
+	public Text pointText;
+	public int startCurrency = 500;
+
 	public int myCurrency {
 		get;
 		private set;
@@ -23,12 +26,19 @@ public class Currency : MonoBehaviour
 			Destroy(gameObject);
 	}
 
+	private void Start() {
+		AddToCurrency(startCurrency);
+	}
+
+	//connect complete
 	public void AddToCurrency(int amount) {
 		myCurrency += amount;
+		pointText.text = "Points: " + myCurrency;
 	}
 
+	//shop
 	public void RemoveFromcurrency(int amount) {
 		myCurrency -= amount;
+		pointText.text = "Points: " + myCurrency;
 	}
-
 }
