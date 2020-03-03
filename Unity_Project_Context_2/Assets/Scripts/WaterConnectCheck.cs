@@ -89,13 +89,12 @@ public class WaterConnectCheck : MonoBehaviour{
 		while(true) {
 			yield return new WaitForSeconds(waterOverflowDelay);
 			float punishmentLevel = (GetTotalOutputs() / layerAmount) - ConnectedTotal();
-			Vector3 newPos = waterRaise.position + Vector3.up * (waterOverflowRaise * punishmentLevel);
+			float newPosY = waterRaise.localPosition.y + (waterOverflowRaise * punishmentLevel);
 
-			while (waterRaise.position.y < newPos.y) {
-				waterRaise.position += Vector3.up * Time.deltaTime;
+			while (waterRaise.localPosition.y < newPosY) {
+				waterRaise.localPosition += new Vector3(0, Time.deltaTime, 0);
 				yield return null;
 			}
-
 		}
 	}
 }
