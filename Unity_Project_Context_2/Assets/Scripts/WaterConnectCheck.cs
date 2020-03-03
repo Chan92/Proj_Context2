@@ -86,9 +86,14 @@ public class WaterConnectCheck : MonoBehaviour{
 	}
 
 	IEnumerator CheckWaterOverflow() {
-		while(true) {
+		while(waterRaise.localPosition.y < 0) {
 			yield return new WaitForSeconds(waterOverflowDelay);
-			float punishmentLevel = (GetTotalOutputs() / layerAmount) - ConnectedTotal();
+			//float punishmentLevel = (GetTotalOutputs() / layerAmount) - ConnectedTotal();
+			float punishmentLevel = 3 - ConnectedTotal();
+			if(punishmentLevel < 0) {
+				punishmentLevel = 0;
+			}
+
 			float newPosY = waterRaise.localPosition.y + (waterOverflowRaise * punishmentLevel);
 
 			while (waterRaise.localPosition.y < newPosY) {
