@@ -29,7 +29,7 @@ public class TileManager : MonoBehaviour
 
 		for(int i = 0; i < Tiles_BoxColl.Length; i++) {
 			Tiles_BoxColl[i] = this.transform.GetChild(i).GetComponent<BoxCollider>();
-			Tiles_BoxColl[i].transform.position = newPos;
+			//Tiles_BoxColl[i].transform.position = newPos;
 			newPos.y -= PipeLineManager.instance.f_floorDistance;
 		}
 

@@ -7,6 +7,8 @@ public class Currency : MonoBehaviour{
 	public Text pointText;
 	public int startCurrency = 500;
 
+	private int hiddenPoints;
+
 	public int myCurrency {
 		get;
 		private set;
@@ -33,12 +35,13 @@ public class Currency : MonoBehaviour{
 	//connect complete
 	public void AddToCurrency(int amount) {
 		myCurrency += amount;
-		pointText.text = "Points: " + myCurrency;
+		hiddenPoints += amount;
+		pointText.text = "" + myCurrency;
 	}
 
 	//shop
-	public void RemoveFromcurrency(int amount) {
+	public void RemoveFromCurrency(int amount) {
 		myCurrency -= amount;
-		pointText.text = "Points: " + myCurrency;
+		pointText.text = "" + myCurrency;
 	}
 }

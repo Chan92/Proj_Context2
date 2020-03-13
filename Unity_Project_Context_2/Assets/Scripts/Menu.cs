@@ -8,7 +8,7 @@ public class Menu : MonoBehaviour
 	public GameObject startScreen;
 	[SerializeField]
 	public GameObject infoScreen;
-
+	public GameObject shopScreen;
 	public static bool b_GameStarted = false;
 
 	//TODO: basic menu for gamejam, to be fixed after gamejam
@@ -17,7 +17,8 @@ public class Menu : MonoBehaviour
     {
 		Time.timeScale = 0;
 		infoScreen.SetActive(false);
-		startScreen.SetActive(!b_GameStarted);
+		shopScreen.SetActive(false);
+		startScreen.SetActive(!b_GameStarted);		
 	}
 
     public void StartGame() 
@@ -30,5 +31,9 @@ public class Menu : MonoBehaviour
 	public void InfoScreen() 
 	{
 		infoScreen.SetActive(!infoScreen.activeSelf);
+	}
+
+	public void OpenCloseShop() {
+		shopScreen.SetActive(!shopScreen.activeInHierarchy);
 	}
 }

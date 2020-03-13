@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1322000329877316205}
   - component: {fileID: 1322000329877316202}
   - component: {fileID: 1950864911684274782}
+  - component: {fileID: 694632508834001494}
   m_Layer: 10
   m_Name: PipeLineSample
   m_TagString: PipeLine
@@ -92,6 +93,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   f_minRandomLife: 40
   f_maxRandomLife: 100
+--- !u!114 &694632508834001494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322000329877316207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3de364eb554a0db4ead67d4b54722530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &5716915435288528655
 SphereCollider:
   m_ObjectHideFlags: 0

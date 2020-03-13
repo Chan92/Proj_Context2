@@ -120,8 +120,8 @@ public class PipeLineManager : MonoBehaviour
                             target_PipeLine_cs.MyRotState++;
 
                         b_IsMouseDown = false;
-
-                        target_PipeLine_cs.b_IsWater = false;
+						target_PipeLine_cs.GetComponent<PipeInfo>().Rotate();
+						target_PipeLine_cs.b_IsWater = false;
                     }
                 }
                 else
@@ -132,6 +132,7 @@ public class PipeLineManager : MonoBehaviour
             }
         }
 
+		
         if (Input.GetKey(KeyCode.Mouse0))
         {
             //Debug.Log("Press");
@@ -158,6 +159,7 @@ public class PipeLineManager : MonoBehaviour
                 Camera.main.transform.position += new Vector3(0, f_ScrollOffset / 10f, 0);
             }
         }
+		
 
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
@@ -183,7 +185,10 @@ public class PipeLineManager : MonoBehaviour
                     TempPipeLine_PipeLine_cs.Exchange_PipeLine_Info(target_PipeLine_cs);
                     TempPipeLine_PipeLine_cs.b_IsPlaced = true;
 
-                    PipeLineHealth TempPipeLine_PipeLineHealth_cs = TempPipeLine_GameObject.GetComponent<PipeLineHealth>();
+					//print(TempPipeLine_PipeLine_cs.gameObject.name);
+					TempPipeLine_PipeLine_cs.GetComponent<PipeInfo>().Placement();
+
+					PipeLineHealth TempPipeLine_PipeLineHealth_cs = TempPipeLine_GameObject.GetComponent<PipeLineHealth>();
                     TempPipeLine_PipeLineHealth_cs.StartBreaking();
 
                     target_GameObject.transform.localPosition = Vector3.zero;
@@ -197,6 +202,8 @@ public class PipeLineManager : MonoBehaviour
                 }
                 target_GameObject = null;
             }
+
+			
             else if (b_CameraScroll)
             {
                 b_CameraScroll = false;
@@ -211,6 +218,7 @@ public class PipeLineManager : MonoBehaviour
 
                 ResetPipeLinePosition();
             }
+			
         }
 
     }
@@ -243,6 +251,8 @@ public class PipeLineManager : MonoBehaviour
         {
             target_PipeLine_cs.b_IsPlaced = true;
             b_IsPipeLinePlaced[i_Floor, x, y] = true;
+			//print(target_PipeLine_cs.gameObject.name);
+			//target_PipeLine_cs.GetComponent<PipeInfo>().Placement();
 			//PipesSpawn.instance.TakePipeFromStorage(target_PipeLine_cs.gameObject);
 		}
         else

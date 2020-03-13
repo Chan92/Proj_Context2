@@ -99,7 +99,9 @@ public class PipeLine : MonoBehaviour
     private void Update()
     {
         b_IsWater = false;
-    }
+		CheckFloor();
+
+	}
 
     private void LateUpdate()
     {
@@ -358,4 +360,26 @@ public class PipeLine : MonoBehaviour
             yield return null;
         }
     }
+
+	void CheckFloor() {		
+		if(b_IsPlaced) {
+			int floorId = PipeLineManager.instance.i_Floor;
+			int sum = Mathf.Abs(Mathf.RoundToInt((transform.localPosition.y + 1.2f) / 14));
+			//print(sum);
+
+			if(sum == floorId) {
+				ToggleRender(true);
+			} else {
+				ToggleRender(false);
+			}
+		}
+	}
+
+	void ToggleRender(bool enable) {
+		foreach(Transform child in transform) {
+			if(child.childCount > 0) {
+				child.GetChild(0).GetComponent<MeshRenderer>().enabled = enable;
+			}
+		}
+	}
 }
